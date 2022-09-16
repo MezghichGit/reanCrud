@@ -11,6 +11,7 @@ const UpdateUser = ({ route, navigation }) => {
 
     return (
         <SafeAreaView>
+            <Text style={styles.titreText}>Interface de mise à jour</Text>
             <Text>Nom : </Text>
             <TextInput
                 style={styles.input}
@@ -24,6 +25,7 @@ const UpdateUser = ({ route, navigation }) => {
                 value={prenom}
 
             />
+            <Button title="Mise à jour" ></Button>
         </SafeAreaView>
     );
 
