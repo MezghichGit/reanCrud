@@ -34,6 +34,18 @@ function showUser(user)
 }
 
 
+const deleteUser =  (userId) => {
+
+  fetch('https://pharma.tunitransport.com/api/public/index.php/api/pharma/users/'+userId,{ method: 'DELETE' })
+  .then((response) => {
+   response.text();
+   navigation.push('ListUsers')
+ })
+ .then((result) => console.log(result))
+ .catch((error) => console.log(error));
+};
+
+
 //########### Début Composant Item
 const Item = ({ item}) => (
   <TouchableOpacity  style={styles.item}>
@@ -47,8 +59,12 @@ const Item = ({ item}) => (
         <Text>{item.email}</Text>
         <Text>{item.prenom}</Text>
         <Text>{item.nom}</Text>
-        <Button  title="Consulter" color="green" onPress={() => showUser(item)} />
-       
+        <View style={styles.myView}>
+          
+          <View style={styles.myViewBtn}><Button  title="Consulter" style={styles.myBtn} color="green" onPress={() => showUser(item)} /></View>
+          <View style={styles.myEspace}></View>
+          <View style={styles.myViewBtn}><Button  title="Supprimer" style={styles.myBtn} color="red" onPress={() => deleteUser(item.id)} /></View>
+        </View>
       </View>
     </View>
   </TouchableOpacity>

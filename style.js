@@ -25,4 +25,21 @@ export default StyleSheet.create({
       flex:1,
       marginLeft:15,
     }
+    ,
+    myBtn:{
+      marginBottom:15,
+      flex:0.4,
+    },
+    myEspace:{
+      flex:0.3
+    },
+    myView:{
+      flex:1,
+      flexDirection:'col',
+    },
+    myViewBtn:{
+      width:"90%",
+      alignItems:'center',
+      justifyContent:'center',
+    }
   });
