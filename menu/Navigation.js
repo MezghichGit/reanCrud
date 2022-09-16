@@ -7,6 +7,7 @@ import AddUser from '../screens/AddUser';
 import ListUsers from '../screens/ListUsers';
 import Home from '../screens/Home';
 import Settings  from '../screens/Settings';
+import DetailsUser from '../screens/DetailsUser';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +16,7 @@ function StackUser() {
               <Stack.Navigator initialRouteName='ListUsers' screenOptions={{headerShown: false}}>
               <Stack.Screen name="ListUsers" component={ListUsers}></Stack.Screen>
               <Stack.Screen name="AddUser" component={AddUser}></Stack.Screen>
+              <Stack.Screen name="DetailsUser" component={DetailsUser}></Stack.Screen>
               </Stack.Navigator>
     );
   }

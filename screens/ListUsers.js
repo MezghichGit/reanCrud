@@ -27,6 +27,13 @@ const ListUsers =({navigation})=>{
     }
   }
 
+function showUser(user)
+{
+  //console.log(user);
+  navigation.navigate('DetailsUser', { user:user});
+}
+
+
 //########### Début Composant Item
 const Item = ({ item}) => (
   <TouchableOpacity  style={styles.item}>
@@ -40,6 +47,7 @@ const Item = ({ item}) => (
         <Text>{item.email}</Text>
         <Text>{item.prenom}</Text>
         <Text>{item.nom}</Text>
+        <Button  title="Consulter" color="green" onPress={() => showUser(item)} />
        
       </View>
     </View>
