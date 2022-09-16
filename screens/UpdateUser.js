@@ -12,7 +12,6 @@ const UpdateUser = ({ route, navigation }) => {
         prenom:prenom
     }
    const updateUserData = ()=> {
-        // Simple PUT request with a JSON body using fetch
         const requestOptions = {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -21,7 +20,7 @@ const UpdateUser = ({ route, navigation }) => {
         fetch('https://pharma.tunitransport.com/api/public/index.php/api/pharma/users/'+user.id, requestOptions)
             .then(response => {
                 response.json();
-                navigation.push('ListUsers')
+                setTimeout(navigation.push('ListUsers'),3000)
               })
     }
     

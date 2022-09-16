@@ -91,6 +91,9 @@ const renderItem = ({ item }) => {
 
     <SafeAreaView style={styles.container}>
       <Text style={styles.titreText}>Liste des Users</Text>
+
+      <Button onPress={()=>navigation.navigate('AddUser')} title="Vers Add" />
+      
       {
       fetchedState ?  <ActivityIndicator size="large" color="#0000ff" /> :
       <FlatList
@@ -99,7 +102,7 @@ const renderItem = ({ item }) => {
         keyExtractor={item => item.id}
       />
       }
-      <Button onPress={()=>navigation.navigate('AddUser')} title="Vers Add" />
+      
     </SafeAreaView>
   );
 }
