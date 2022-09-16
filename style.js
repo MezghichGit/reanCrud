@@ -28,10 +28,11 @@ export default StyleSheet.create({
     ,
     myBtn:{
       marginBottom:15,
-      flex:0.4,
+      flex:0.3,
+      fontSize: 12,
     },
     myEspace:{
-      flex:0.3
+      flex:0.1
     },
     myView:{
       flex:1,
@@ -41,5 +42,11 @@ export default StyleSheet.create({
       width:"90%",
       alignItems:'center',
       justifyContent:'center',
+    },
+    input: {
+      height: 40,
+      margin: 12,
+      borderWidth: 1,
+      padding: 10,
     }
   });

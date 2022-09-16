@@ -8,6 +8,7 @@ import ListUsers from '../screens/ListUsers';
 import Home from '../screens/Home';
 import Settings  from '../screens/Settings';
 import DetailsUser from '../screens/DetailsUser';
+import UpdateUser from '../screens/UpdateUser';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ function StackUser() {
               <Stack.Screen name="ListUsers" component={ListUsers}></Stack.Screen>
               <Stack.Screen name="AddUser" component={AddUser}></Stack.Screen>
               <Stack.Screen name="DetailsUser" component={DetailsUser}></Stack.Screen>
+              <Stack.Screen name="UpdateUser" component={UpdateUser}></Stack.Screen>
               </Stack.Navigator>
     );
   }

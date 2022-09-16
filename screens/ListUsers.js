@@ -33,6 +33,12 @@ function showUser(user)
   navigation.navigate('DetailsUser', { user:user});
 }
 
+function updateUser(user)
+{
+  //console.log(user);
+  navigation.navigate('UpdateUser', { user:user});
+}
+
 
 const deleteUser =  (userId) => {
 
@@ -64,6 +70,8 @@ const Item = ({ item}) => (
           <View style={styles.myViewBtn}><Button  title="Consulter" style={styles.myBtn} color="green" onPress={() => showUser(item)} /></View>
           <View style={styles.myEspace}></View>
           <View style={styles.myViewBtn}><Button  title="Supprimer" style={styles.myBtn} color="red" onPress={() => deleteUser(item.id)} /></View>
+          <View style={styles.myEspace}></View>
+          <View style={styles.myViewBtn}><Button  title="Modifier" style={styles.myBtn} color="orange" onPress={() => updateUser(item)} /></View>
         </View>
       </View>
     </View>
